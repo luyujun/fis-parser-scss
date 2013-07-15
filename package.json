@@ -1,0 +1,24 @@
+{
+  "name": "fis-parser-scss",
+  "version": "0.0.0",
+  "description": "A parser plugin for fis to compile scss file.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/luyujun/fis-parser-scss.git"
+  },
+  "author": "luyujun <luyujun87@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "node-sass": ">=0.5.4"
+  },
+  "devDependencies": {
+    "fis": "1.0.1"
+  }
+}

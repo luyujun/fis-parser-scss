@@ -1,27 +1,55 @@
-# fis-parser-sass
+# fis-parser-scss
 
 > **WARNING** : Node.js ``v0.10.0`` required!!!
 
-A parser plugin for fis to compile sass file.
+A parser plugin for fis to compile scss file.
 
 ## usage
 
-    $ npm install -g fis-parser-sass
-    $ vi path/to/project/fis-conf.js
+    $ npm install -g fis
+    $ npm install -g fis-parser-scss
+    $ vi example/fis-conf.js
 
 ```javascript
-//file : path/to/project/fis-conf.js
+//file : example/fis-conf.js
 fis.config.merge({
-    roadmap : {
-        ext : {
-            //compile *.scss into *.css
-            scss : 'css'
-        }
-    },
-    modules : {
-        parser : {
-            scss : 'sass'
-        }
+  modules:{
+    parser:{
+      scss: 'scss'
     }
+  },
+  settings:{
+    parser:{
+      scss: {outputStyle:'compressed'}
+    }
+  },
+  roadmap:{
+    ext:{
+      scss: 'scss'
+    }
+  }
 });
 ```
+
+```javascript
+//set jade option
+`outputStyle` is a `String` to determine how the final CSS should be rendered. Its value should be one of `'nested', 'expanded', 'compact', 'compressed'`.
+[Important: currently the argument `outputStyle` has some problem which may cause the output css becomes nothing because of the libsass, so you should not use it now!]
+we can use 'nested' or 'compressed'
+
+fis.config.set('settings.parser.scss', {outputStyle:'compressed'});
+//or
+fis.config.merge({
+  settings:{
+    parser:{
+      scss: {outputStyle:'compressed'}
+    }
+  }
+});
+```
+
+## example
+
+    $ cd example
+    $ fis release -d output
+

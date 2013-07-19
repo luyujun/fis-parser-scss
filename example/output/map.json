@@ -1,0 +1,9 @@
+{
+    "res": {
+        "style.scss": {
+            "uri": "/style.css",
+            "type": "css"
+        }
+    },
+    "pkg": {}
+}

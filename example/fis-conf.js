@@ -4,6 +4,11 @@ fis.config.merge({
         scss : 'scss'
       }
     },
+    settings :{
+      parser: {
+        scss : {outputStyle: 'compressed'}
+      }
+    },
     roadmap : {
       ext : {
         scss : 'css'

@@ -31,12 +31,12 @@ fis.config.merge({
 });
 ```
 
-```javascript
-//set jade option
 `outputStyle` is a `String` to determine how the final CSS should be rendered. Its value should be one of `'nested', 'expanded', 'compact', 'compressed'`.
 [Important: currently the argument `outputStyle` has some problem which may cause the output css becomes nothing because of the libsass, so you should not use it now!]
 we can use 'nested' or 'compressed'
 
+```javascript
+//set scss option
 fis.config.set('settings.parser.scss', {outputStyle:'compressed'});
 //or
 fis.config.merge({

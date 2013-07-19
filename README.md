@@ -25,7 +25,7 @@ fis.config.merge({
   },
   roadmap:{
     ext:{
-      scss: 'scss'
+      scss: 'css'
     }
   }
 });
